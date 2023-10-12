@@ -1,0 +1,267 @@
+
+
+/* Var */
+:root {
+    --c-dark: #212529;
+    --c-brand: #4e57d4;
+    --c-brand-light: #6970dd;
+    --c-brand-rgb: rgb(78, 87, 212);
+    --c-body: #727272;
+    --font-base: "Clashdisplay", sans-serif;
+    --box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.08);
+    --transition: all 0.5 ease;
+}
+
+/* Reset & Helpers*/
+
+body {
+    font-family: var(--font-base);
+    line-height: 1, 7;
+    color: var(--c-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-weight: 600;
+    color: var(--c-dark);
+}
+
+a {
+    text-decoration: none;
+    color: var(--c-brand);
+    transition: var(--transition);
+}
+
+a:hover {
+    max-width: 100%;
+    height: auto;
+}
+
+.section-padding {
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+
+.theme-shadow {
+    box-shadow: var(--box-shadow);
+}
+
+/* NAVBAR */
+
+.navbar {
+    box-shadow: var(--box-shadow);
+
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: var(--c-dark);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--c-brand);
+}
+
+.btn {
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 10px 24px;
+}
+
+.btn-brand {
+    background-color: var(--c-brand);
+    color: white;
+
+}
+
+.btn-brand {
+    background-color: var(--c-brand-light);
+    border-color: var(--c-brand-light);
+
+}
+
+/*Page 1*/
+
+#Page1 {
+    background: linear-gradient(rgba(var(--c-brand-rgb), 0.507) rgba((var(--c-brand-light)), 0.507));
+    background-image: url(https://assets-global.website-files.com/6009ec8cda7f305645c9d91b/6435999f28d5550726bd30f4_march%20projects.jpg);
+    background-position: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.section-title {
+    margin-bottom: 60px;
+}
+
+#Profile {
+    font-family: var(--font-base);
+}
+
+.section-title .line {
+    width: 60px;
+    height: 4px;
+    background-color: var(--c-brand);
+    margin: 16px auto 24px auto;
+}
+
+.section-title p {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    max-width: 992;
+    max-height: 790px;
+}
+
+.iconbox {
+    width: 70px;
+    height: 70px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: linear-gradient(rgba(var(--c-brand-rgb), 0.1));
+    color: var(--c-brand);
+    font-size: 34px;
+    margin-right: 30px;
+}
+
+#Work {
+    background: linear-gradient(rgba(var(--c-brand-rgb), 0.507) rgba((var(--c-brand-light)), 0.507));
+    background-position: center;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.mycards {
+    margin: 20px auto 0px auto;
+    width: 95%;
+    height: min-content;
+    max-height: 800px;
+    max-width: 1200px;
+    text-align: center;
+    image-resolution: auto;
+}
+
+.card2 {
+    margin-top: 30px;
+}
+
+/* Card */
+
+.card {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.card::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: aqua, 0.2;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: var(--transition);
+}
+
+.card:hover::after {
+    width: 100%;
+    height: 100%;
+    background: aquamarine;
+    z-index: -1;
+}
+
+.card:hover h5,
+.card p {
+    color: black;
+}
+
+.card:hover .imgin {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: black;
+}
+
+footer {
+    padding-top: 100px;
+}
+
+.footer-top {
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+}
+
+.footer-bottom {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+footer li, footer p , footer a {
+    color: white;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .line {
+    width: 40px;
+    height: 4px;
+    background-color: var(--c-brand);
+    margin-top: 12px;
+    margin-bottom: 22px;
+}
+
+#contact {
+    position: relative;
+    z-index: 2;
+
+}
+
+#contact::after{
+    content: "";
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(rgba(var(--c-brand-rgb),0.8)), rgba(var(--c-brand-rgb),0.8);
+    background-image: url(https://assets-global.website-files.com/6009ec8cda7f305645c9d91b/6435999f28d5550726bd30f4_march%20projects.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+}
+
+#contact .form-control {
+    border-radius: 0;   
+}
+
+#contact .form-control:focus {
+    box-shadow: none;
+    border-color: var(--c-brand);
+}
+
+.linelast{
+    width : 150px;
+    height: 4px;
+    background-color: var(--c-brand)
+}
